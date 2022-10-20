@@ -22,11 +22,26 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" Height="38" Grid.RowSpan="2">
             <Button Style="{StaticResource ActiveDocButton}">Открыть</Button>
             <Button Style="{StaticResource DocBt}">Обработать</Button>
             <Button Style="{StaticResource DocBt}">Сохранить</Button>
             <Button Padding="5" Margin="5">Закрыть</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button Content="Задание 3" Height="100" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF9C3EF" Offset="1"/>
+                        <GradientStop Color="#FF9B5353"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
