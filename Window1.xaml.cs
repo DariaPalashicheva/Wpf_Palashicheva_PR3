@@ -26,7 +26,12 @@ namespace Wpf_Palashicheva_PR3
 
         private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
+            (sender as FrameworkElement).Style = (Style)Resources["tbbig"];
+        }
 
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            (sender as FrameworkElement).Style = (Style)Resources["tbsmall"];
         }
     }
 }
